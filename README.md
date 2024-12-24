@@ -1,5 +1,7 @@
 # Social network project
 
+Upgrade of old project: https://github.com/daklod2k3/sgu-social 
+
 This project is Social network system  
 Progress:
 
