@@ -1,0 +1,3 @@
+[submodule "be/main"]
+	path = be/main
+	url = https://github.com/daklod2k3/social-network-backend-go.git
