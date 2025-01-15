@@ -1,23 +1,8 @@
-# Social network project
+# Full-stack Social Network
 
-Upgrade of old project: https://github.com/daklod2k3/sgu-social 
+Upgrade of old project: <https://github.com/daklod2k3/sgu-social>
 
-This project is Social network system  
-Progress:
-
-- Frontend:
-  - [x] Login/Register
-  - [ ] Dashboard
-  - [ ] News feed
-  - [ ] Create post
-  - [ ] Message
-  - [ ] ...
-- Backend:
-  - [x] Auth api
-  - [ ] Resource api (post, comment,...)
-  - [ ] Message queue for feed new post
-  - [ ] Realtime notification
-  - [ ] ...
+Full-stack Social Network using NextJS for Front-end and Microservice Back-end combine multi stack (Go, Spring,...)
 
 ## Techstack
 
@@ -29,15 +14,37 @@ Progress:
 
 ### Backend
 
-- Language: Go
-- Framework: Go-gin
-- Database: MongoDB
+- Api Gateway: Kong gateway
+- Language: Go, Java
+- Architectural: Microservice
+- Service communicate: gRPC
+- Design approach: Domain-Driven Design
+- Framework: Go-gin, Spring,...
+- Database: MongoDB, PostgreSQL
 
 ## System Design
+
+### Overview
+
+![Overview](/screenshots/overview.png)
+
+### Services
+
+![alt text](/screenshots/services.png)
+
 ### Database
+
 - Documents view
-![entity.png](screenshots/entity.png)
+  ![entity.png](screenshots/entity.png)
+  Updating...
 - Embedded view
-![img.png](screenshots/embed.png)
+  ![img.png](screenshots/embed.png)
+  Updating...
+
+### Login/Register flow
+
+![auth_flow](/screenshots/seq.Login_Register.png)
+
 ### Post and NewsFeed flow
+
 ![flow_image](screenshots/flow.png)

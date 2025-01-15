@@ -1,0 +1,29 @@
+title Login/Register
+
+actor client
+participant "Client App" as web
+participant "API Gateway" as api
+participant "Auth Service" as Auth
+participant "Profile Service" as profile
+
+autoactivation on
+
+client->web: Input mail, password
+web->api: Login/Register (mail,pass)
+api->Auth:
+Auth-->api: Success (access_token)
+api-->web: Success (access_token)
+web-->web: Redirect to dashboard
+web->api: Get Profile
+api->profile: 
+profile-->api: return Profile
+api-->web: return Profile
+alt Profile == null
+web-->client: show create UI
+client->web: Input Name,...
+web->api: Create profile request
+api->profile:
+profile-->api: Success (created Profile)
+api-->web: Success (created Profile)
+end
+web-->client: Show dashboard
